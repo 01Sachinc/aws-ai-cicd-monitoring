@@ -17,7 +17,7 @@ It demonstrates a 7-stage pipeline—from the first line of code to real-time AI
 ### 🛠️ High-Level Infrastructure
 
 ```mermaid
-graph TD
+graph LR
     User([Users]) --> GitHub
 
     subgraph GitHub_Repo ["GitHub Repository"]
