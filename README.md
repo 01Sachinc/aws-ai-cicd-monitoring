@@ -16,15 +16,50 @@ It demonstrates a 7-stage pipeline—from the first line of code to real-time AI
 
 ### 🛠️ High-Level Infrastructure
 
-![Architecture Diagram](architecture/architecture-diagram.png)
+```mermaid
+graph TD
+    User([Users]) -->|Git Push| GitHub{GitHub Repo}
+    subgraph "CI/CD Pipeline"
+        GitHub --> Build[Build Stage]
+        Build --> Test[Test Stage]
+        Test --> Deploy[Deployment Stage]
+    end
+    subgraph "AWS Infrastructure (Simulated)"
+        Deploy --> EC2[EC2 Instance]
+        EC2 --> Logs[(S3 Logs)]
+        Logs --> CW[CloudWatch]
+        CW --> AI[AI Log analysis]
+        AI --> Alert{Anomaly?}
+        Alert -->|Yes| SNS[SNS Notification]
+        Alert -->|No| Success[System Stable]
+    end
+```
 
 ### 📈 Pipeline Flow
 
-![Pipeline Flow](architecture/pipeline-flow.png)
+```mermaid
+graph LR
+    A[1. Code Commit] --> B[2. Build]
+    B --> C[3. Test]
+    C --> D[4. Deployment]
+    D --> E[5. Monitoring]
+    E --> F[6. AI Log Analysis]
+    F --> G[7. Alert Generation]
+```
 
 ### 🔄 Logic Flow
 
-![Logic Flow](architecture/logic-flow.png)
+```mermaid
+graph TD
+    Start([Start]) --> Fetch[Collect Logs from Simulated CloudWatch]
+    Fetch --> Scan[AI Engine: Scan for CRITICAL/ERROR patterns]
+    Scan --> Check{Anomaly Detected?}
+    Check -->|Yes| Anomaly[Generate Anomaly Report]
+    Check -->|No| Normal[System Health OK]
+    Anomaly --> Notify[Trigger Simulated SNS Alert]
+    Normal --> End([Wait for Next Cycle])
+    Notify --> End
+```
 
 ---
 
