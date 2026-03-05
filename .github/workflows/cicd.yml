@@ -1,0 +1,33 @@
+name: AWS AI-Driven CI/CD Monitoring Pipeline Simulation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Stage 2 - Build
+        run: ./scripts/build.sh
+
+      - name: Stage 3 - Test
+        run: ./scripts/test.sh
+
+      - name: Stage 4 - Deployment (Simulated)
+        run: ./scripts/deploy.sh
+
+      - name: Stage 5 - Monitoring (Simulated)
+        run: ./scripts/monitor.sh
+
+      - name: Stage 6 - AI Anomaly Detection
+        run: ./scripts/ai_log_analyzer.sh
