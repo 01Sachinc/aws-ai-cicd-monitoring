@@ -1,6 +1,9 @@
 #!/bin/bash
-
-# --- PIPELINE ORCHESTRATOR ---
+# -------------------------------------------------------------------
+# Project: AI-Driven CI/CD Monitoring Pipeline (Simulated)
+# Author: Sachin C S
+# Component: Pipeline Orchestrator
+# -------------------------------------------------------------------
 echo "========================================"
 echo "PIPELINE: AI-DRIVEN CI/CD START"
 echo "========================================"
