@@ -94,33 +94,3 @@ aws-ai-cicd-monitoring/
 ├── scripts/                # Modular simulation engine
 └── logs/                   # Simulated production logs
 ```
-
----
-
-## 💼 LinkedIn & Resume Showcase
-
-**Author**: Sachin  
-**Specialization**: DevOps Automation & Cloud Architecture
-
-### LinkedIn Post Content
-
-**Headline**: Just launched a simulated AI-Driven CI/CD Pipeline! 🚀
-
-I've been working on a project that simulates a complete DevOps lifecycle with an AI-inspired twist. This project demonstrates:
-✅ 7-Stage automated CI/CD pipeline using Shell Scripting.
-✅ AI-Driven Anomaly Detection for infrastructure health.
-✅ Simulated AWS architecture with EC2, S3, and CloudWatch integration.
-✅ Automated verification via GitHub Actions.
-
-Built this to showcase how deep automation and proactive monitoring can safeguard modern cloud environments.
-
-Check it out: [Repo Link]
-
-#DevOps #AWS #Automation #CloudSecurity #SachinPortfolio #CICD
-
-### Resume Bullet Points
-
-- **Engineered an AI-Driven CI/CD Pipeline Simulation**: Developed a 7-stage automated workflow in Bash, achieving seamless build, test, and deployment phases.
-- **Implemented Anomaly Detection Logic**: Created a pattern-matching monitoring engine capable of identifying resource spikes and error clusters in production logs.
-- **Architected Simulated AWS Infrastructure**: Modeled enterprise-grade cloud environments (EC2, S3, CloudWatch) to demonstrate proficiency in infrastructure-as-code and monitoring strategies.
-- **Automated Pipeline Verification**: Integrated GitHub Actions to ensure 100% reliability in simulation execution across different environments.
