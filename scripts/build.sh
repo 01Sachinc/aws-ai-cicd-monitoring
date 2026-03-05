@@ -1,6 +1,9 @@
 #!/bin/bash
-
-# --- BUILD STAGE SIMULATION ---
+# -------------------------------------------------------------------
+# Project: AI-Driven CI/CD Monitoring Pipeline (Simulated)
+# Author: Sachin
+# Stage: 2 - Build
+# -------------------------------------------------------------------
 echo "========================================"
 echo "STAGE 2: BUILD"
 echo "========================================"
