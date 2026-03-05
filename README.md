@@ -18,20 +18,26 @@ It demonstrates a 7-stage pipeline—from the first line of code to real-time AI
 
 ```mermaid
 graph TD
-    User([Users]) -->|Git Push| GitHub{GitHub Repo}
-    subgraph "CI/CD Pipeline"
+    User([Users]) --> GitHub
+
+    subgraph GitHub_Repo ["GitHub Repository"]
+        GitHub{Repository}
+    end
+
+    subgraph CICD ["CI/CD Pipeline"]
         GitHub --> Build[Build Stage]
         Build --> Test[Test Stage]
         Test --> Deploy[Deployment Stage]
     end
-    subgraph "AWS Infrastructure (Simulated)"
+
+    subgraph AWS ["AWS Infrastructure (Simulated)"]
         Deploy --> EC2[EC2 Instance]
-        EC2 --> Logs[(S3 Logs)]
-        Logs --> CW[CloudWatch]
-        CW --> AI[AI Log analysis]
-        AI --> Alert{Anomaly?}
-        Alert -->|Yes| SNS[SNS Notification]
-        Alert -->|No| Success[System Stable]
+        EC2 --> S3[(S3 Logs)]
+        S3 --> CW[CloudWatch]
+        CW --> AI[AI Analysis]
+        AI --> Decision{Anomaly?}
+        Decision -->|Yes| SNS[SNS Alert]
+        Decision -->|No| Stable[Stable]
     end
 ```
 
@@ -39,26 +45,26 @@ graph TD
 
 ```mermaid
 graph LR
-    A[1. Code Commit] --> B[2. Build]
-    B --> C[3. Test]
-    C --> D[4. Deployment]
-    D --> E[5. Monitoring]
-    E --> F[6. AI Log Analysis]
-    F --> G[7. Alert Generation]
+    Stage1[Code Commit] --> Stage2[Build]
+    Stage2 --> Stage3[Test]
+    Stage3 --> Stage4[Deployment]
+    Stage4 --> Stage5[Monitoring]
+    Stage5 --> Stage6[AI Analysis]
+    Stage6 --> Stage7[Alerting]
 ```
 
 ### 🔄 Logic Flow
 
 ```mermaid
 graph TD
-    Start([Start]) --> Fetch[Collect Logs from Simulated CloudWatch]
-    Fetch --> Scan[AI Engine: Scan for CRITICAL/ERROR patterns]
-    Scan --> Check{Anomaly Detected?}
-    Check -->|Yes| Anomaly[Generate Anomaly Report]
-    Check -->|No| Normal[System Health OK]
-    Anomaly --> Notify[Trigger Simulated SNS Alert]
-    Normal --> End([Wait for Next Cycle])
-    Notify --> End
+    In([Start Cycle]) --> Collect[Collect Logs]
+    Collect --> Engine[AI Engine Scan]
+    Engine --> Logic{Detect Anomaly?}
+    Logic -->|Yes| Report[Anomaly Report]
+    Logic -->|No| OK[Health OK]
+    Report --> Alert[SNS Alert]
+    OK --> Finish([End Cycle])
+    Alert --> Finish
 ```
 
 ---
