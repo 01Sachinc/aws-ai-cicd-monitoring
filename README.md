@@ -1,6 +1,6 @@
 # AI-Driven CI/CD Monitoring Pipeline with AWS Architecture Simulation 🚀
 
-Developed by **Sachin** | DevOps & Cloud Simulation Specialist
+Developed by **Sachin C S** | DevOps & Cloud Simulation Specialist
 
 ---
 
@@ -88,7 +88,7 @@ bash scripts/pipeline.sh
 
 ```text
 aws-ai-cicd-monitoring/
-├── README.md               # Premium Documentation by Sachin
+├── README.md               # Premium Documentation by Sachin C S
 ├── architecture/           # High-resolution diagrams
 ├── .github/workflows/      # GitHub Actions automation
 ├── scripts/                # Modular simulation engine

@@ -1,7 +1,7 @@
 #!/bin/bash
 # -------------------------------------------------------------------
 # Project: AI-Driven CI/CD Monitoring Pipeline (Simulated)
-# Author: Sachin
+# Author: Sachin C S
 # Stage: 2 - Build
 # -------------------------------------------------------------------
 echo "========================================"
