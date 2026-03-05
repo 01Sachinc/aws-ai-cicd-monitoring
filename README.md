@@ -22,21 +22,9 @@ It demonstrates a 7-stage pipeline—from the first line of code to real-time AI
 
 ![Pipeline Flow](architecture/pipeline-flow.png)
 
-### 🔄 Logic Flow (Mermaid)
+### 🔄 Logic Flow
 
-```mermaid
-graph TD
-    A[Developers] -->|Git Push| B(GitHub Repo)
-    B --> C{CI/CD Pipeline}
-    C --> D[Stage 2: Build]
-    D --> E[Stage 3: Test]
-    E --> F[Stage 4: Deploy to EC2]
-    F --> G[Stage 5: CloudWatch Monitoring]
-    G --> H[Stage 6: AI Log Analysis]
-    H --> I{Anomaly?}
-    I -->|Yes| J[Stage 7: Alert SNS]
-    I -->|No| K[System Stable]
-```
+![Logic Flow](architecture/logic-flow.png)
 
 ---
 
