@@ -163,4 +163,4 @@ Linux Administrator | Infrastructure Automation
 
 ## 🌐 Connect With Me
 
-[LinkedIn](https://www.linkedin.com/in/sachincs) | [GitHub](https://github.com/01Sachinc)
+[LinkedIn](https://www.linkedin.com/in/csesachin/) | [GitHub](https://github.com/01Sachinc)
